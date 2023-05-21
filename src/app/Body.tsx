@@ -8,9 +8,9 @@ import { useApplyThemeConfiguration } from "@/app/useApplyThemeConfiguration";
 
 import { ReactNode } from "react";
 
-type Props = { children: ReactNode };
+type BodyProps = { children: ReactNode };
 
-function BodyContents({ children }: Props) {
+function BodyContents({ children }: BodyProps) {
   const isRenderingOnServerSide = useIsRenderingOnServerSide();
 
   const themeClassName = useThemeClassName();
@@ -44,7 +44,7 @@ function BodyContents({ children }: Props) {
   );
 }
 
-export function Body({ children }: Props) {
+export function Body({ children }: BodyProps) {
   return (
     <RecoilRoot>
       <BodyContents>{children}</BodyContents>
