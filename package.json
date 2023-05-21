@@ -15,6 +15,7 @@
     "axios": "^1.4.0",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
+    "junoblocks": "^0.2.93",
     "native-base": "^3.4.28",
     "next": "13.4.3",
     "react": "18.2.0",
@@ -22,6 +23,8 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-svg": "^12.1.1",
     "react-native-web": "^0.17.1",
+    "recoil": "^0.7.7",
+    "sass": "^1.62.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
