@@ -50,11 +50,11 @@ const CLAUSES = [
   ],
   [
     "Jurisdiction",
-    `You agree that any disputes arising out of or relating to the "Your App's Name" app or this agreement will be subject to the jurisdiction of the state and federal courts located within the State of Texas. You hereby consent and submit to the personal and exclusive jurisdiction of such courts for the purposes of litigating any such action.`,
+    `You agree that any disputes arising out of or relating to the ${APP_NAME} app or this agreement will be subject to the jurisdiction of the state and federal courts located within the State of Texas. You hereby consent and submit to the personal and exclusive jurisdiction of such courts for the purposes of litigating any such action.`,
   ],
   [
     "Dispute Resolution",
-    `In the event of any controversy or dispute between you and "Your App's Name" arising out of or in connection with your use of the app, the parties shall attempt, promptly and in good faith, to resolve any such dispute. If we are unable to resolve any such dispute within a reasonable time (not to exceed thirty (30) days), then either party may submit such controversy or dispute to mediation. If the dispute cannot be resolved through mediation, then the parties shall be free to pursue any right or remedy available to them under applicable law.`,
+    `In the event of any controversy or dispute between you and ${APP_NAME} arising out of or in connection with your use of the app, the parties shall attempt, promptly and in good faith, to resolve any such dispute. If we are unable to resolve any such dispute within a reasonable time (not to exceed thirty (30) days), then either party may submit such controversy or dispute to mediation. If the dispute cannot be resolved through mediation, then the parties shall be free to pursue any right or remedy available to them under applicable law.`,
   ],
 ];
 

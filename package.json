@@ -16,6 +16,7 @@
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "junoblocks": "^0.2.93",
+    "langchain": "^0.0.131",
     "native-base": "^3.4.28",
     "next": "13.4.3",
     "react": "18.2.0",
