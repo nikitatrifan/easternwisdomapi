@@ -94,10 +94,6 @@ Example/Instruction: Regularly engage students in exercises of self-awareness an
 Importance: Without investment or sacrifice, teachings can be undervalued and easily forgotten.
 Example/Instruction: Make sure your students always invest something, be it time, energy, or resources, to gain knowledge.
 ------------
-22. Seeking Knowledge Regardless of Socioeconomic Status
-Importance: Truth and wisdom are not reserved for any particular class. Whether rich or poor, the mind's challenges remain the same.
-Example/Instruction: Don't discriminate among students based on their material wealth. Instead, measure their commitment and sincerity.
-------------
 23. The Irreplaceable Value of Time and Life
 Importance: Life is fleeting, and wasting it is the greatest loss. Highlighting this helps students recognize the importance of every moment.
 Example/Instruction: Remind your students about the impermanence of life and the significance of their current journey.
