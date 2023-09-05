@@ -1,7 +1,6 @@
 import { OpenAI } from "langchain/llms/openai";
 import { NextResponse } from "next/server";
 import { getGuidedQuery } from "@/app/api/query/guide";
-import { knowledgeBase } from "@/app/api/query/knowledgebase";
 
 const llm = new OpenAI({
   modelName: "gpt-4",
@@ -27,7 +26,6 @@ export async function POST(request: Request) {
 
   try {
     const guidedQuery = getGuidedQuery({
-      knowledgeBase,
       query,
     });
 
