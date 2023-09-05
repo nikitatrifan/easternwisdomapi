@@ -10,6 +10,18 @@ const llm = new OpenAI({
   openAIApiKey: process.env.NEXT_PUBLIC_OPEN_AI_KEY,
 });
 
+function removeReferences(input: string) {
+  return input.split("----")?.[0].trim() || input.trim();
+}
+
+function removeLabels(input: string) {
+  return input.replace(/\[[^\]]+\]:/gi, "").trim();
+}
+
+function formatLLMResponse(response: string) {
+  return removeLabels(removeReferences(response));
+}
+
 export async function POST(request: Request) {
   const { query } = await request.json();
 
@@ -19,18 +31,28 @@ export async function POST(request: Request) {
       query,
     });
 
-    const result = await llm.predict(guidedQuery);
+    console.log(guidedQuery);
+
+    const prediction = await llm.predict(guidedQuery);
+    const result = formatLLMResponse(prediction);
+
+    console.log({ prediction })
 
     return NextResponse.json({ result });
   } catch (e: any) {
-    console.log("Errror", e?.response?.data ?? e.message);
+    console.log("Error", e?.response?.data ?? e.message);
+
+    let quotaErrorKind = false;
+
+    if (e?.response?.data?.error?.code === "rate_limit_exceeded") {
+      quotaErrorKind = true;
+    } else if ((e?.name || e?.message)?.toLowerCase()?.includes("quota")) {
+      quotaErrorKind = true;
+    }
 
     return NextResponse.json({
       error: true,
-      type:
-        e?.response?.data?.error?.code === "rate_limit_exceeded"
-          ? "rate_limit"
-          : "unknown",
+      type: quotaErrorKind ? "rate_limit" : "unknown",
     });
   }
 }
